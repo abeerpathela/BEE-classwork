@@ -7,7 +7,44 @@
      <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1 id="mainHeading"> Retail Billing System</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Add To Cart</h2>
+            <div class="productGroup">
+                <div>
+                    <label for="product-filter"></label>
+                    <input type="text" id="product-filter" name="product-filter" placeholder="Enter product information" required>
+                </div>
+                <div>
+                    <label for="product-price"></label>
+                    <input type="number" id="product-price" name="product-price" placeholder="Enter product price" required>
+                </div>
+                <div>
+                    <label for="product-qty"></label>
+                    <input type="text" id="product-qty" name="product-qty" placeholder="Enter product quantity" required>
+                </div>
+                <div>
+                    <button type="submit" id="addtocart">Add To Cart</button>
+                </div>
+            </div>
+            <h2>Cart Items </h2>
+            <div class="cart-items">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Product Info</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

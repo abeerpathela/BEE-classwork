@@ -1,0 +1,11 @@
+#mainHeading{
+    text-align:center;
+    color: blue;
+    margin-bottom: 40px;
+}
+
+.productGroup{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
