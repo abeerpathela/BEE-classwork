@@ -3,53 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POS Biling System</title>
-     <link rel="stylesheet" href="styles.css">
+    <title>POS Billing System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="mainHeading"> Retail Billing System</h1>
-    <div class="container">
+    <h1 id="mainHeading">Retail Billing System </h1>
+    <div class="container" >
         <div class="card">
             <h2>Add To Cart</h2>
             <div class="productGroup">
                 <div>
-                    <label for="product-filter"></label>
+                    <label for="product-filter">Product Information:</label>
                     <input type="text" id="product-filter" name="product-filter" placeholder="Enter product information" required>
-                </div>
-                <div>
-                    <label for="product-price"></label>
+                    </div>
+                    <div>
+                    <label for="product-price">Product Price:</label>
                     <input type="number" id="product-price" name="product-price" placeholder="Enter product price" required>
-                </div>
-                <div>
-                    <label for="product-qty"></label>
-                    <input type="text" id="product-qty" name="product-qty" placeholder="Enter product quantity" required>
-                </div>
-                <div>
-                    <button type="submit" id="addtocart">Add To Cart</button>
-                </div>
+                    </div>
+                    <div>
+                        <label for="product-qty">Product Quantity:</label>
+                    <input type="number" id="product-qty" name="product-qty" placeholder="Enter product quantity" required>
+                    </div>
+                <div><button type="submit" id="addtocart">Add to Cart</button></div>
             </div>
-            <h2>Cart Items </h2>
-            <div class="cart-items">
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Product Info</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="product-description">
+            
+        </div>
+        <h2>Cart Items</h2>
+        <div class="cart-items">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Product Information</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cartBody">
+                </tbody>
+            </table>
 
-                    </tbody>
-                </table>
+        </div>
+
+        <div class="card">
+            <h2>Bill Summary</h2>
+            <div class="bill-summary">
+                <div class="total-items">Total Items: <span id="totalItems">0</span></div>
+                <div class="sub-total">Total: <span id="subTotal">0.00</span></div>
+                <div class="GST">GST : <span id="gstAmount">0.00</span></div>
+                <div class="grand-total">Grand Total: <span id="grandTotal">0.00</span></div>
             </div>
         </div>
+
+
     </div>
     <script src="index.js"></script>
 </body>
 </html>
+<!-- Document object model 
+ It is a web api that provide interface to work on the html structure.
+ It creates the hierarchy tree from the root node.
+ The attributes are added as a property to the element 
+ 
+
+ // questions..... 
+ Ques1> why we write script tag at the endof the body tag? 
+ Ques2> what is dom( Document Object Model) 
+    dom is the wweb api that provides interface to javascript ti work on the html structure dom creates the hericrial trees 
+    and the root node is documnet and we mke tag which known as element and makes objects the attributes are add in the object 
+    text node add : make the child node and add the node 
+
+ques> div is block element means it takes the full width of the page and it is used to group the elements and make the 
+    structure of the page ques> getElementById is used to get the element by its id and it returns the element object if element
+     not found it returns null. ques> event listener is used to listen the event on the element and it takes two parameters first
+      is the event name and second is the callback function which will be called when the event is triggered. 
+     filter only retruns new array of the elements which satisfy the condition and it does not change the original array. 
+     
+     
+----   event publing      
+----ques>   difference between local storage , session storage and cookies
+            ---local stograge data store till i delete or refresh it
+            ---data stiore in lical stirage until deleted or updated or refreshed
+            ---depending on the browser thw local storage has 5 mb to 10 mb of data storage and it is not sent to the server with every request
+            ---all data store in string format
+            ---even if i refresh the page,close the browser the data will be there in local storage
+            ---not used to store personal data because it is not secure and it can be accessed by any script on the page
+
+            session storage:
+            ---data store in session storage until the browser is closed
+            ---depending on the browser the session storage has 5 mb to 10 mb of data storage and it is not sent to the server with every request
+            ---the data of the local storage and session storege os not automatically appended to the request header and it is not sent to the server with every request
+
+
+            cookies:
+            ---cookies are small text files that are stored on the client side and it is sent to the server with every request
+            ---storage is 4kb
+            ---its data ised forauthorization and authentication and it is used to store the user preferences and it is used to track the user behavior on the website
+            ---the data of the cookies is automatically appended to the request header and it is sent to the server with every request
+     
+     
+     
+     
+     -->
 
 <!-- DOM - Document Object Model  -->
 <!-- DOM is a web api that browser provides us the interface of the html and with the help of it js communicates with HTML  -->
