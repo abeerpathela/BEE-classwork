@@ -45,25 +45,26 @@ function saveCartToLocalStorage(){
 
 // This function will render the data from the cart array to the table
 function renderData(){
+
+    cartTableBody.innerHTML = "";
+
     cart.forEach((item)=>{
-        const row = cartTableBody.insertRow();
-        row.setAttribute("id", item.Id);
 
         const newRow = cartTableBody.insertRow();
+        newRow.setAttribute("id", item.Id);
+
         const cell1 = newRow.insertCell(0);
         const cell2 = newRow.insertCell(1);
         const cell3 = newRow.insertCell(2);
         const cell4 = newRow.insertCell(3);
         const cell5 = newRow.insertCell(4);
 
-
-        cell1.textContent=item.productname;
-        cell2.textContent=item.productPrice;
-        cell3.textContent=item.productQuantity;
-        cell4.textContent=item.Total;
+        cell1.textContent = item.Name;
+        cell2.textContent = item.Price;
+        cell3.textContent = item.Quantity;
+        cell4.textContent = item.Total;
         cell5.innerHTML = `<button class="delete-btn" aria-label="Delete">&#x2715;</button>`;
-
-})
+    });
 }
 
 function BillCalculator(){
