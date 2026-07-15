@@ -40,18 +40,7 @@ const searchButton=document.getElementById("searchButton");
 const API_KEY=GENERATED_KEY_HERE_TO_BE_PLACED;
 
 
-// function buttonHandler(){
-//     let cityName=inputBox.value;
-//     let API_CALL=`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=48f2e22dcbee22cd4783c78f5fc94ed2`;
-//     fetch(API_CALL).then(res=>res.json()).then((data)=>{
-//         // console.log(data.name);
-//         // console.log(data.sys.country);
-//         // console.log(data.weather[0].description);
-//         // console.log(data.main.temp);
-//         // console.log(data.main.humidity);
-//         // console.log(data.wind.speed);
-//     }).catch(err=>console.log(err));
-// }
+
 
 function updateUI(data) {
     document.getElementById("cityName").innerText = data.name;
