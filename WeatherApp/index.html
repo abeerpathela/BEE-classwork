@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="mainform">
+    <!-- <form id="mainform">
         Title: <input type="text" name="title">
         Body: <input type="text" name="body">
         UserId: <input type="text" name="userId">
         <button type="submit">Submit</button>
-    </form>
+    </form> -->
+    <h1>Weather App</h1>
+    <input type="text" id="searchBar">
+    <button id="searchButton">Search</button>
+
+    <div class="hidden">
+        <h2><span id='cityName'></span><span id="countrycode"></span></h2>
+        <div>weather description: <p><span id="wdesc"></span></p></div>
+        <div>Temperature: <p><span id="temp"></span></p></div>
+        <div>Humidity: <p><span id="humid"></span></p></div>
+        <div>Wind Speed <p><span id="wspeed"></span></p></div>  
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
