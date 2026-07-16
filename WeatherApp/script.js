@@ -37,7 +37,8 @@
 const inputBox=document.getElementById("searchBar");
 const searchButton=document.getElementById("searchButton");
 
-const API_KEY=GENERATED_KEY_HERE_TO_BE_PLACED;
+// const API_KEY=GENERATED_KEY_HERE_TO_BE_PLACED;
+
 
 
 
