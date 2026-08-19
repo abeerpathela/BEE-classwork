@@ -1,5 +1,3 @@
-alert("Script file is working");
-
 const form = document.getElementById("mainform");
 form.addEventListener("submit",(event)=>{
     event.preventDefault();
