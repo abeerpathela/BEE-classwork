@@ -1,0 +1,5 @@
+[{"id":1,"product":"Mobile","category":"Electronics","price":1000},
+{"id":2,"product":"T-Shirt","category":"Clothing","price":500},
+{"id":3,"product":"Shoes","category":"Footwear","price":1800},
+{"id":4,"product":"Goggles","category":"Eyewear","price":800}
+]

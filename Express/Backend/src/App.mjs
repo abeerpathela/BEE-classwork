@@ -132,7 +132,7 @@ app.get('/signup', (req, res) => {
 
 app.get('/dashboard',authMiddleware, (req, res) => {
 
-    return res.sendFile(path.join(__dirname, './public/Dashboard.html'));
+    res.render('dashboard',{user:req.session.username})
 
 });
 
@@ -194,6 +194,9 @@ app.post('/logindata', (req, res) => {
   });
   // res.redirect('/');
 });
+
+app.set('view-engine',ejs);
+app.set('views',path.join(__dirname,'./views'));
 
 app.listen(PORT, (err) => {
     console.log(`Server listening on port ${PORT}...`);
